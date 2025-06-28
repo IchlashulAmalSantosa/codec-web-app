@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Multimedia Codec & Steganography Web</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Multimedia Codec & Steganography System</h1>
+
+    <section>
+      <h2>Steganografi Gambar (LSB)</h2>
+      <form id="imageStegoForm" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required />
+        <input
+          type="text"
+          name="message"
+          placeholder="Masukkan pesan rahasia"
+          required
+        />
+        <button type="submit">Encode Image</button>
+      </form>
+      <div id="imageStegoResult"></div>
+    </section>
+
+    <section>
+      <h2>Decode Pesan dari Gambar Stego</h2>
+      <form id="decodeForm" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required />
+        <button type="submit">Decode Image</button>
+      </form>
+      <div id="decodeResult"></div>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Kompresi Audio</h2>
+      <form id="audioForm" enctype="multipart/form-data">
+        <input type="file" name="audio" accept="audio/*" required />
+        <select name="bitrate">
+          <option value="64k">64 kbps</option>
+          <option value="96k">96 kbps</option>
+          <option value="128k">128 kbps</option>
+        </select>
+        <button type="submit">Compress Audio</button>
+      </form>
+      <div id="audioResult"></div>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Kompresi Video</h2>
+      <form id="videoForm" enctype="multipart/form-data">
+        <input type="file" name="video" accept="video/*" required />
+        <select name="bitrate">
+          <option value="500k">500 kbps</option>
+          <option value="1000k">1000 kbps</option>
+          <option value="2000k">2000 kbps</option>
+        </select>
+        <button type="submit">Compress Video</button>
+      </form>
+      <div id="videoResult"></div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+  <footer class="footer-running">
+    <div class="marquee">
+      <span
+        >Sistem Codec & Steganografi – UAS Sistem Multimedia Kelompok 14
+        Ichlashul 'Amal Santosa (1227050054) & Ilham Marwan Sidik
+        (1227050055)</span
+      >
+    </div>
+  </footer>
+</html>
