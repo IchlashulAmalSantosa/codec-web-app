@@ -52,49 +52,30 @@ cd codec-web
 
 ### 2. Buat & Aktifkan Virtual Environment
 
-python -m venv venv
+```python -m venv venv```
 
 # Windows
 
-venv\Scripts\activate
+```venv\Scripts\activate```
 
 # Linux/macOS
 
-source venv/bin/activate
+```source venv/bin/activate```
 
 ### 3. Install Dependensi
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 ### 4. Jalankan Aplikasi
 
-python app.py
+```python app.py```
 
-Lalu buka browser ke: http://127.0.0.1:5000
+Lalu buka browser ke: ```http://127.0.0.1:5000```
 
 ### 📁 Struktur Proyek
 
-codec-web-app/
-├── app/
-│ ├── routes/
-│ │ └── main.py
-│ ├── services/
-│ │ ├── image_codec.py
-│ │ ├── audio_codec.py
-│ │ ├── video_codec.py
-│ │ └── stego.py
-│ └── utils/
-│ └── helpers.py
-├── static/
-│ ├── css/style.css
-│ ├── js/script.js
-│ └── uploads/
-├── templates/
-│ └── index.html
-├── app.py
-├── requirements.txt
-├── .render.yaml
-└── README.md
+![image](https://github.com/user-attachments/assets/9a6b3f4d-27cc-49e2-9763-ea5dc0690ab1)
+
 
 ### 👨‍💻 Dibuat Oleh
 
