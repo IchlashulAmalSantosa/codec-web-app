@@ -74,7 +74,7 @@ Lalu buka browser ke: ```http://127.0.0.1:5000```
 
 ### 📁 Struktur Proyek
 
-![image](https://github.com/user-attachments/assets/9a6b3f4d-27cc-49e2-9763-ea5dc0690ab1)
+![image](https://github.com/user-attachments/assets/3d0e5c26-67eb-4374-b733-f6e4b3a9b068)
 
 
 ### 👨‍💻 Dibuat Oleh
