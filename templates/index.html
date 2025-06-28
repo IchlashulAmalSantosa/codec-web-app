@@ -38,6 +38,22 @@
     <hr />
 
     <section>
+      <h2>Kompresi Gambar</h2>
+      <form id="imageCompressForm" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required />
+        <label for="quality">Quality:</label>
+        <select name="quality">
+          <option value="20">20%</option>
+          <option value="40">40%</option>
+          <option value="60" selected>60%</option>
+          <option value="80">80%</option>
+        </select>
+        <button type="submit">Compress Image</button>
+      </form>
+      <div id="imageCompressResult"></div>
+    </section>
+
+    <section>
       <h2>Kompresi Audio</h2>
       <form id="audioForm" enctype="multipart/form-data">
         <input type="file" name="audio" accept="audio/*" required />
