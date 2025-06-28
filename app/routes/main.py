@@ -10,7 +10,7 @@ UPLOAD_FOLDER = 'static/uploads'
 def home():
     return render_template("index.html")
 
-# 🔏 Steganografi Gambar
+# Steganografi Gambar
 @main.route('/encode-image', methods=['POST'])
 def encode_image():
     image = request.files['image']
@@ -24,8 +24,22 @@ def decode_image():
     message = stego.decode_lsb(image)
     return jsonify({"status": "success", "message": message})
 
+# Kompresi Gambar
+@main.route('/compress-image', methods=['POST'])
+def compress_image():
+    image = request.files['image']
+    quality = int(request.form.get('quality', 50))
+    filename = secure_filename(image.filename)
+    input_path = os.path.join(UPLOAD_FOLDER, filename)
+    output_path = os.path.join(UPLOAD_FOLDER, f"compressed_{filename}")
 
-# 🎵 Kompresi Audio
+    image.save(input_path)
+    image_codec.compress_image(input_path, output_path, quality=quality)
+
+    return jsonify({"status": "success", "output_path": output_path})
+
+
+# Kompresi Audio
 @main.route('/compress-audio', methods=['POST'])
 def compress_audio():
     audio = request.files['audio']
