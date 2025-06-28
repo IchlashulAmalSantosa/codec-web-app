@@ -79,7 +79,7 @@ Lalu buka browser ke: ```http://127.0.0.1:5000```
 
 ### 👨‍💻 Dibuat Oleh
 
-Nama: **Ichlashul 'Amal Santosa (1227050054) & Ilham Marwan Sidik (1227050055)**
+**Ichlashul 'Amal Santosa (1227050054) & Ilham Marwan Sidik (1227050055)**
 
 ### 📃 Lisensi
 
