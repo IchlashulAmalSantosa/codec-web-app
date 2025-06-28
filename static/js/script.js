@@ -92,3 +92,27 @@ document.getElementById("videoForm").onsubmit = async function (e) {
       "❌ Gagal kompres video.";
   }
 };
+
+// KOMPRESI GAMBAR
+document.getElementById("imageCompressForm").onsubmit = async function (e) {
+  e.preventDefault();
+  const formData = new FormData(this);
+  showLoading("imageCompressResult");
+
+  const response = await fetch("/compress-image", {
+    method: "POST",
+    body: formData,
+  });
+
+  const result = await response.json();
+  if (result.output_path) {
+    document.getElementById("imageCompressResult").innerHTML = `
+      <p>✅ Gambar berhasil dikompresi:</p>
+      <img src="${result.output_path}" width="300" />
+      <p><a href="${result.output_path}" download>⬇️ Download Gambar</a></p>
+    `;
+  } else {
+    document.getElementById("imageCompressResult").innerText =
+      "❌ Gagal kompres gambar.";
+  }
+};
